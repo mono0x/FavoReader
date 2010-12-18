@@ -1,0 +1,34 @@
+{
+  "name": {
+    "message": "FavoReader",
+    "description": "拡張機能の名称"
+  },
+  "description": {
+    "message": "livedoor Reader上でTwitterのツイートをお気に入りに追加できる拡張機能です。",
+    "description": "拡張機能の説明"
+  },
+  "options_title": {
+    "message": "オプション"
+  },
+  "options_settings_title": {
+    "message": "設定"
+  },
+  "options_settings_shortcutkey_title": {
+    "message": "ショートカットキー"
+  },
+  "options_license_title": {
+    "message": "ライセンス"
+  },
+  "message_adding": {
+    "message": "お気に入りに追加中"
+  },
+  "message_success": {
+    "message": "お気に入りに追加しました"
+  },
+  "message_already_added": {
+    "message": "すでに追加されています"
+  },
+  "message_error": {
+    "message": "エラーが発生しました"
+  }
+}

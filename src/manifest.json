@@ -1,0 +1,26 @@
+{
+  "name": "__MSG_name__",
+  "version": "0.0.1",
+  "description": "__MSG_description__",
+  "default_locale": "ja",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "http://api.twitter.com/1/favorites/create/*.json",
+    "http://twitter.com/oauth/request_token",
+    "http://twitter.com/oauth/access_token",
+    "http://twitter.com/oauth/authorize"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://reader.livedoor.com/reader/",
+        "http://www.fastladder.com/reader/"
+      ],
+      "js": [ "favoreader.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "update_url": "http://monoweb.info/chrome/extension/favoreader/updates.xml"
+}

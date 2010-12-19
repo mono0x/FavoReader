@@ -26,6 +26,14 @@
     <script type="text/javascript" src="chrome_ex_oauthsimple.js"></script>
     <script type="text/javascript" src="chrome_ex_oauth.js"></script>
     <script type="text/javascript">
+
+      var initSettings = function() {
+        if(!localStorage.options_settings_shortcutkey) {
+          localStorage.options_settings_shortcutkey = 'F';
+        }
+      };
+      initSettings();
+
       var oauth = ChromeExOAuth.initBackgroundPage({
         'request_url':     'http://twitter.com/oauth/request_token',
         'authorize_url':   'http://twitter.com/oauth/authorize',

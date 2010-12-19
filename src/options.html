@@ -42,7 +42,11 @@
         var shortcut = new ShortcutInput(
           "options_settings_shortcutkey",
           settings.options_settings_shortcutkey || 'F',
-          function(v) { settings.options_settings_shortcutkey = v; }
+          function(v) {
+            if(v) {
+              settings.options_settings_shortcutkey = v;
+            }
+          }
         );
 
       }, false);

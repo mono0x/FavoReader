@@ -44,15 +44,25 @@
 
         Keybind.add(shortcut, function() {
           var item = get_active_item(true);
-          if(item && item.link.match(/^http:\/\/twitter\.com\/(?:#!\/)?(\w+)\/statuses\/(\d+)\/?$/)) {
-            var screen_name = RegExp.$1;
-            var id = RegExp.$2;
-            element.innerText = Object.toJSON({
-              'type':        'createFavorite',
-              'screen_name': screen_name,
-              'id':          id
-            });
-            element.dispatchEvent(customEvent);
+          if(item) {
+            var id = null;
+            var screen_name = null;
+            var link = item.link;
+            if(link.match(/^http:\/\/twitter\.com\/(?:#!\/)?(\w+)\/statuses\/(\d+)\/?$/)) {
+              screen_name = RegExp.$1;
+              id = RegExp.$2;
+            }
+            else if(link.match(/^http:\/\/favotter\.net\/status\.php\?id=(\d+)$/)) {
+              id = RegExp.$1;
+            }
+            if(id !== null) {
+              element.innerText = Object.toJSON({
+                'type':        'createFavorite',
+                'screen_name': screen_name,
+                'id':          id
+              });
+              element.dispatchEvent(customEvent);
+            }
           }
         });
       };

@@ -35,9 +35,9 @@
       initSettings();
 
       var oauth = ChromeExOAuth.initBackgroundPage({
-        'request_url':     'http://twitter.com/oauth/request_token',
-        'authorize_url':   'http://twitter.com/oauth/authorize',
-        'access_url':      'http://twitter.com/oauth/access_token',
+        'request_url':     'https://twitter.com/oauth/request_token',
+        'authorize_url':   'https://twitter.com/oauth/authorize',
+        'access_url':      'https://twitter.com/oauth/access_token',
         'consumer_key':    'dio4pJb0ZghXFS35z19LMg',
         'consumer_secret': '3IIri7Doir8D8zLhx8qK8LJZwHX328XZZ43dnPAgcd0'
       });
@@ -62,7 +62,7 @@
           else if(m.type == 'createFavorite') {
             message('message_adding');
             oauth.authorize(function() {
-              var uri = 'http://api.twitter.com/1/favorites/create/' + m.id + '.json';
+              var uri = 'https://api.twitter.com/1/favorites/create/' + m.id + '.json';
               var onReceive = function(text, xhr) {
                 var status = JSON.parse(text);
                 console.log(status);

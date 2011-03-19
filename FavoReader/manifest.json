@@ -7,10 +7,10 @@
   "options_page": "options.html",
   "permissions": [
     "tabs",
-    "http://api.twitter.com/1/favorites/create/*.json",
-    "http://twitter.com/oauth/request_token",
-    "http://twitter.com/oauth/access_token",
-    "http://twitter.com/oauth/authorize"
+    "https://api.twitter.com/1/favorites/create/*.json",
+    "https://twitter.com/oauth/request_token",
+    "https://twitter.com/oauth/access_token",
+    "https://twitter.com/oauth/authorize"
   ],
   "content_scripts": [
     {

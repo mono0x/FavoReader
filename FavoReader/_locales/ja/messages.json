@@ -4,7 +4,7 @@
     "description": "拡張機能の名称"
   },
   "description": {
-    "message": "livedoor Reader上でTwitterのツイートをお気に入りに追加できる拡張機能です。",
+    "message": "livedoor Reader、FastladderおよびGoogle Reader上でTwitterのツイートをお気に入りに追加できる拡張機能です。",
     "description": "拡張機能の説明"
   },
   "options_title": {

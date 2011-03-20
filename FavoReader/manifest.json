@@ -18,7 +18,17 @@
         "http://reader.livedoor.com/reader/",
         "http://www.fastladder.com/reader/"
       ],
-      "js": [ "favoreader.js" ],
+      "js": [ "content_scripts/livedoor_reader.js" ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "http://www.google.com/reader/*",
+        "http://www.google.co.jp/reader/*",
+        "https://www.google.com/reader/*",
+        "https://www.google.co.jp/reader/*"
+      ],
+      "js": [ "content_scripts/google_reader.js" ],
       "run_at": "document_end"
     }
   ],

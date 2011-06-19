@@ -64,6 +64,7 @@
               element.dispatchEvent(customEvent);
             }
           }
+          return false;
         });
       };
     };

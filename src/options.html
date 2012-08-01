@@ -24,44 +24,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Options | FavoReader</title>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-5224843-9']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    <script type="text/javascript" src="lib/analytics.js"></script>
     <script type="text/javascript" src="lib/shortcutinput.js"></script>
-    <script type="text/javascript">
-      (function() {
-      document.addEventListener('DOMContentLoaded', function() {
-        var setMessage = function(id, name) {
-          document.getElementById(id).innerText = chrome.i18n.getMessage(name || id);
-        };
-        setMessage('options_title');
-        setMessage('options_settings_title');
-        setMessage('options_settings_shortcutkey_title');
-        setMessage('options_license_title');
-
-        var background = chrome.extension.getBackgroundPage();
-        var settings = background.localStorage;
-
-        var shortcut = new ShortcutInput(
-          "options_settings_shortcutkey",
-          settings.options_settings_shortcutkey || 'F',
-          function(v) {
-            if(v) {
-              settings.options_settings_shortcutkey = v;
-            }
-          }
-        );
-
-      }, false);
-      })();
-    </script>
+    <script type="text/javascript" src="lib/options.js"></script>
   </head>
   <body>
     <h1 id="options_title"></h1>

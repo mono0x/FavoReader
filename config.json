@@ -1,0 +1,10 @@
+{
+  "name": "FavoReader",
+  "appid": "ninhakjklinlkogkdenpenclognbhiek",
+  "codebase": "http://monoweb.info/chrome/extension/favoreader/FavoReader.crx",
+  "source_dir": "src",
+  "pem_file": "FavoReader.pem",
+  "crx_file": "output/FavoReader.crx",
+  "update_file": "output/updates.xml",
+  "zip_file": "output/FavoReader.zip"
+}

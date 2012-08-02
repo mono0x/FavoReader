@@ -43,6 +43,5 @@
       "js": [ "content_scripts/google_reader.js" ],
       "run_at": "document_end"
     }
-  ],
-  "update_url": "http://monoweb.info/chrome/extension/favoreader/updates.xml"
+  ]
 }
